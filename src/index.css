@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  padding: 50px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  min-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    min-width: 70%;
+    max-width: 100%;
+  }
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.add-task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  height: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6f33b8;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 30px 0;
+  width: 100%;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.task-info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.task-info input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(25, 169, 25);
+  border-radius: 50%;
+  outline: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.task-info input[type='checkbox']:checked {
+  background: rgb(25, 169, 25);
+}
+
+.task-info input[type='checkbox']:checked::after {
+  content: '\2713';
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.task-name {
+  width: 100%;
+}
+
+.delete-task {
+  background-color: #fc5555;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-task svg {
+  fill: #fff;
+  height: 20px;
+  width: 20px;
+}
